@@ -9,7 +9,7 @@ final _sectionNavigatorKey = GlobalKey<NavigatorState>();
 
 abstract class AppPages {
   static final routes = GoRouter(
-    initialLocation: Routes.COUNTER,
+    initialLocation: Routes.HOME,
     navigatorKey: _rootNavigatorKey,
     routes: [
       GoRoute(
