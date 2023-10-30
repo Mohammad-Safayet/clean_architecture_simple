@@ -42,6 +42,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/app/development
+/android/app/staging
+/android/app/production
+
+/android/app/src/production
+/android/app/src/development
+/android/app/src/staging
 
 # Generated files
 **/*.g.dart
