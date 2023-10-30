@@ -1,0 +1,10 @@
+{
+    "@@locale": "en",
+    "@@author": "MD. Safayet Latif",
+    "@@last_modified": "Monday, October 30, 2023",
+    "@@context": "HomePage",
+    "myHomePageTitle": "Flutter Demo Home Page",
+    "@myHomePageTitle": {
+        "description": "Title of home page"
+    }
+}
