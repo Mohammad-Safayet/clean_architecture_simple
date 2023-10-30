@@ -50,6 +50,11 @@ app.*.map.json
 /android/app/src/development
 /android/app/src/staging
 
+# Icons for ios
+ios/Runner/Assets.xcassets/AppIcon-development.appiconset/
+ios/Runner/Assets.xcassets/AppIcon-production.appiconset/
+ios/Runner/Assets.xcassets/AppIcon-staging.appiconset/
+
 # Generated files
 **/*.g.dart
 **/*.freezed.dart
