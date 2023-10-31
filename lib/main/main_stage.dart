@@ -11,6 +11,7 @@ void main() async {
   final envConfig = EnvConfig(
     appName: packageInfo.appName,
     appVersion: packageInfo.version,
+    baseUrl: "https://api.chucknorris.io/",
   );
 
   BuildConfig.instantiate(
