@@ -14,7 +14,7 @@ import 'package:chuck_norris/src/core/utils/network/network_provider.dart';
 import 'package:chuck_norris/src/core/utils/network/network_error_handlers.dart';
 
 /// An abstract class representing a remote data source for network requests.
-abstract class BaseRemoteDataSource {
+abstract class BaseRemoteDatasource {
   /// The Dio client used for making API requests with headers.
   Dio get dioClient => NetworkProvider.dioWithHeaderToken;
 

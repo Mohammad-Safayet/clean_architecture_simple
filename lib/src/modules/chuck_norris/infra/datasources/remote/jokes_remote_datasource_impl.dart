@@ -3,7 +3,7 @@ import 'package:chuck_norris/src/modules/chuck_norris/infra/models/categories_mo
 import 'package:chuck_norris/src/modules/chuck_norris/infra/models/random_model.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_remote_datasource.dart';
 
-class JokesRemoteDatasourceImpl extends BaseRemoteDataSource
+class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
     implements JokesRemoteDatasource {
   @override
   Future<CategoriesModel> getJokesCategories() async {
