@@ -4,7 +4,7 @@ import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/random.dar
 import 'package:chuck_norris/src/modules/chuck_norris/infra/models/random_model.dart';
 
 extension RandomModelExtension on RandomModel {
-  Random toModel() {
+  Random toEntity() {
     return Random(
       categories: categories,
       createdAt: DateFormat().parseLoose(createdAt),
