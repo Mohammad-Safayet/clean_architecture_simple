@@ -25,7 +25,17 @@ class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
 
   @override
   Future<RandomModel> getRandomJokes() async {
-    // TODO: implement getRandomJokes
-    throw UnimplementedError();
+    try {
+      final endpoint = "${dioClient.options.baseUrl}jokes/random";
+
+      final api = dioClient.get(endpoint);
+
+      final response = await callApiWithErrorParser(api);
+      final json = response.data;
+
+      return RandomModel.fromJson(json);
+    } catch (error) {
+      rethrow;
+    }
   }
 }
