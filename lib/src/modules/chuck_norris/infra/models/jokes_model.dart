@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'random_model.g.dart';
 
 @JsonSerializable()
-class RandomModel {
+class JokeModel {
   final List<String> categories;
   @JsonKey(name: "created_at")
   final String createdAt;
@@ -15,7 +15,7 @@ class RandomModel {
   final String url;
   final String value;
 
-  RandomModel({
+  JokeModel({
     required this.categories,
     required this.createdAt,
     required this.updatedAt,
@@ -25,7 +25,7 @@ class RandomModel {
     required this.value,
   });
 
-  factory RandomModel.fromJson(Map<String, dynamic> json) =>
+  factory JokeModel.fromJson(Map<String, dynamic> json) =>
       _$RandomModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$RandomModelToJson(this);
