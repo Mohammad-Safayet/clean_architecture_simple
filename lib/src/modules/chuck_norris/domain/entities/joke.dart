@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'random.freezed.dart';
 
 @freezed
-class Random with _$Random {
-  const factory Random({
+class Joke with _$Random {
+  const factory Joke({
     required List<String> categories,
     required DateTime createdAt,
     required DateTime updatedAt,
