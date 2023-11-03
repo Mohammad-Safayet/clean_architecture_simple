@@ -7,8 +7,8 @@ extension RandomModelExtension on RandomModel {
   Random toEntity() {
     return Random(
       categories: categories,
-      createdAt: DateFormat().parseLoose(createdAt),
-      updatedAt: DateFormat().parseLoose(updatedAt),
+      createdAt: DateTime.parse(createdAt),
+      updatedAt: DateTime.parse(updatedAt),
       iconUrl: iconUrl,
       id: id,
       url: url,
