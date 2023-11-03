@@ -1,5 +1,5 @@
 abstract class JokesRepository {
   Future getJokesCategories();
 
-  Future getJokesRandom();
+  Future getRandomJoke();
 }

@@ -1,6 +1,6 @@
 import 'package:chuck_norris/src/modules/chuck_norris/infra/datasources/remote/jokes_remote_datasource.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/infra/models/categories_model.dart';
-import 'package:chuck_norris/src/modules/chuck_norris/infra/models/random_model.dart';
+import 'package:chuck_norris/src/modules/chuck_norris/infra/models/jokes_model.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_remote_datasource.dart';
 
 class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
@@ -24,7 +24,7 @@ class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
   }
 
   @override
-  Future<RandomModel> getRandomJokes() async {
+  Future<JokeModel> getRandomJoke() async {
     try {
       final endpoint = "${dioClient.options.baseUrl}jokes/random";
 
@@ -32,8 +32,9 @@ class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
 
       final response = await callApiWithErrorParser(api);
       final json = response.data;
+      logger.d(json);
 
-      return RandomModel.fromJson(json);
+      return JokeModel.fromJson(json);
     } catch (error) {
       rethrow;
     }
