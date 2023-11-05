@@ -26,7 +26,7 @@ Exception handleNetworkError(DioException dioError) {
     case DioExceptionType.sendTimeout:
     case DioExceptionType.connectionError:
       return TimeoutException(
-        message: "Connection ${dioError.type} has occurred with API server",
+        message: "Connection timeout has occurred with API server",
       );
     case DioExceptionType.badCertificate:
       return ApplicationException(
