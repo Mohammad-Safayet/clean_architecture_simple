@@ -9,7 +9,6 @@ import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/joke.dart'
 import 'package:chuck_norris/src/modules/chuck_norris/domain/repositories/jokes_repo_impl.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_random_jokes_usecase.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_view.dart';
-import 'package:logger/logger.dart';
 
 class JokesView extends BaseView<Joke> {
   @override
