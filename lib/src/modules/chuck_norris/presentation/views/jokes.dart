@@ -39,7 +39,7 @@ class JokesView extends BaseView<Joke> {
               getData();
               setState();
             },
-            child: const Text("Reload New Joke"),
+            child: const Text("R E L O A D    N E W    F A C T"),
           ),
         ],
       ),
