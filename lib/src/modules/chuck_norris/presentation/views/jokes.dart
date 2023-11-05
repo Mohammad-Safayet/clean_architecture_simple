@@ -23,6 +23,8 @@ class JokesView extends BaseView<Joke> {
         AppValues.padding,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "Created at: ${DateFormat().add_yMMMMEEEEd().format(data.createdAt)}",
@@ -65,6 +67,8 @@ class JokesView extends BaseView<Joke> {
       color: Theme.of(context).colorScheme.error,
       width: double.infinity,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             data.title,
