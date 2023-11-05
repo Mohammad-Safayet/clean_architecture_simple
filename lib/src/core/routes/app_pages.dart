@@ -1,3 +1,4 @@
+import 'package:chuck_norris/src/modules/chuck_norris/chuck_norris_page.dart';
 import 'package:chuck_norris/src/modules/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -15,7 +16,9 @@ abstract class AppPages {
       GoRoute(
         path: Routes.HOME,
         builder: (context, state) {
-          return  const HomePage(title: 'Flutter Demo Home Page');
+          ChuckNorrisPage.registerDependencies();
+
+          return HomePage();
         },
       ),
     ],
