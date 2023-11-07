@@ -39,4 +39,21 @@ class JokesRemoteDatasourceImpl extends BaseRemoteDatasource
       rethrow;
     }
   }
+
+  @override
+  Future<JokeModel> getJoke(String category) async {
+    try {
+      final endpoint = "${dioClient.options.baseUrl}jokes/random?category=$category";
+
+      final api = dioClient.get(endpoint);
+
+      final response = await callApiWithErrorParser(api);
+      final json = response.data;
+      logger.d(json);
+
+      return JokeModel.fromJson(json);
+    } catch (error) {
+      rethrow;
+    }
+  }
 }
