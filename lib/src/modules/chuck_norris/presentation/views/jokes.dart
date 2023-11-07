@@ -1,14 +1,15 @@
-import 'package:chuck_norris/src/core/utils/error_handling/error_handling.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'package:chuck_norris/src/core/constants/app_text_styles.dart';
-import 'package:chuck_norris/src/core/constants/app_values.dart';
 import 'package:chuck_norris/src/core/utils/di/di.dart';
+import 'package:chuck_norris/src/core/constants/app_values.dart';
+import 'package:chuck_norris/src/modules/shared/base/base_view.dart';
+import 'package:chuck_norris/src/core/constants/app_text_styles.dart';
+import 'package:chuck_norris/src/core/utils/error_handling/error_handling.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/joke.dart';
+import 'package:chuck_norris/src/modules/chuck_norris/presentation/widgets/error.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/repositories/jokes_repo_impl.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_random_jokes_usecase.dart';
-import 'package:chuck_norris/src/modules/shared/base/base_view.dart';
 
 class JokesView extends BaseView<Joke> {
   @override
@@ -62,33 +63,12 @@ class JokesView extends BaseView<Joke> {
       );
     }
 
-    return Container(
-      color: Theme.of(context).colorScheme.error,
-      width: double.infinity,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            data.title,
-            style: AppTextStyles.errorTitle,
-          ),
-          Text(
-            data.message,
-            style: AppTextStyles.errorDesc,
-          ),
-          OutlinedButton(
-            onPressed: () {
-              getData();
-              setState();
-            },
-            child: const Text(
-              "Reload",
-              style: AppTextStyles.errorButton,
-            ),
-          ),
-        ],
-      ),
+    return ErrorBodyWidget(
+      data: data,
+      onPressed: () {
+        getData();
+        setState();
+      },
     );
   }
 
