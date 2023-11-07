@@ -1,3 +1,4 @@
+import 'package:chuck_norris/src/modules/shared/widgets/ripple_button.dart';
 import 'package:flutter/material.dart';
 
 import 'package:chuck_norris/src/core/utils/error_handling/error_handling.dart';
@@ -10,6 +11,14 @@ import 'package:chuck_norris/src/modules/shared/base/base_view.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/presentation/widgets/error.dart';
 
 class CategoriesView extends BaseView<Categories> {
+  final Function voidCallback;
+  final String activeItemName;
+
+  CategoriesView({
+    required this.voidCallback,
+    required this.activeItemName,
+  });
+
   @override
   Widget body(
     BuildContext context,
@@ -22,13 +31,22 @@ class CategoriesView extends BaseView<Categories> {
         scrollDirection: Axis.horizontal,
         itemCount: data.list.length,
         itemBuilder: (context, index) {
+          final listData = data.list[index];
           return Container(
             margin: const EdgeInsets.symmetric(
               horizontal: AppValues.margin_4,
             ),
-            child: Chip(
-              label: Text(
-                data.list[index],
+            child: RippleButton(
+              onTap: () {
+                voidCallback(listData);
+              },
+              child: Chip(
+                backgroundColor: (activeItemName == listData)
+                    ? Theme.of(context).colorScheme.primaryContainer
+                    : Theme.of(context).cardColor,
+                label: Text(
+                  listData,
+                ),
               ),
             ),
           );
