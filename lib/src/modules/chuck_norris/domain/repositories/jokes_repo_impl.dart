@@ -33,4 +33,16 @@ class JokesRepositoryImpl extends JokesRepository {
       rethrow;
     }
   }
+
+  @override
+  Future getJoke(String category) async {
+    try {
+      final model = await datasource.getJoke(category);
+      final entity = model.toEntity();
+
+      return entity;
+    } catch(error) {
+      rethrow;
+    }
+  }
 }
