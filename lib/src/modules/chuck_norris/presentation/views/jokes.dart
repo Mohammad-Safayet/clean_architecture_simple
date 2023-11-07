@@ -19,7 +19,7 @@ class JokesView extends BaseView<Joke> {
   ) {
     return Container(
       padding: const EdgeInsets.all(
-        AppValues.padding,
+        AppValues.paddingLarge,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
