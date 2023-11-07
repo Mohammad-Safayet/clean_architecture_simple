@@ -5,6 +5,6 @@ import 'package:flutter/material.dart';
 class HomeView extends StatelessWidget with BaseWidgetMixin {
   @override
   Widget? body(BuildContext context) {
-    return const ChuckNorrisPage();
+    return ChuckNorrisPage();
   }
 }
