@@ -3,11 +3,11 @@ import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/joke.dart'
 import 'package:chuck_norris/src/modules/chuck_norris/infra/repositories/jokes_repo.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_usecase.dart';
 
-class GetRandomJokeUsecase extends BaseUsecase<Joke> {
+class GetJokeUsecase extends BaseUsecase<Joke> {
   final JokesRepository repository;
   String _category = "";
 
-  GetRandomJokeUsecase({required this.repository});
+  GetJokeUsecase({required this.repository});
 
   set category(String value) {
     _category = value;
