@@ -1,3 +1,5 @@
+import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_joke_usecase.dart';
+import 'package:chuck_norris/src/modules/shared/base/base_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -12,6 +14,10 @@ import 'package:chuck_norris/src/modules/chuck_norris/domain/repositories/jokes_
 import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_random_jokes_usecase.dart';
 
 class JokesView extends BaseView<Joke> {
+  final String category;
+
+  JokesView({required this.category,});
+
   @override
   Widget body(
     BuildContext context,
@@ -75,10 +81,16 @@ class JokesView extends BaseView<Joke> {
   @override
   Future<Joke> getData() async {
     final di = DependencyInjection.instance;
-    final randomJokeUsecase =
-        GetRandomJokeUsecase(repository: di.getIt<JokesRepositoryImpl>());
+    final usecase;
 
-    final joke = await randomJokeUsecase.call();
+    if(category == "random") {
+      usecase = GetRandomJokeUsecase(repository: di.getIt<JokesRepositoryImpl>());
+    } else {
+      usecase = GetJokeUsecase(repository: di.getIt<JokesRepositoryImpl>());
+      usecase.category = category;
+    }
+
+    final joke = await usecase.call();
 
     final result = joke.fold((l) => l, (r) => r);
 

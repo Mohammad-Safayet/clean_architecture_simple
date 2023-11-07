@@ -5,7 +5,10 @@ import 'package:chuck_norris/src/modules/chuck_norris/presentation/views/joke.da
 import 'package:flutter/material.dart';
 
 class ChuckNorrisView extends StatefulWidget {
-  const ChuckNorrisView({Key? key, required this.categories,}) : super(key: key);
+  const ChuckNorrisView({
+    Key? key,
+    required this.categories,
+  }) : super(key: key);
 
   final Categories categories;
 
@@ -36,7 +39,9 @@ class _ChuckNorrisViewState extends State<ChuckNorrisView> {
             voidCallback: setCategory,
           ),
           Expanded(
-            child: JokesView(),
+            child: JokesView(
+              category: category,
+            ),
           ),
         ],
       ),
