@@ -17,7 +17,7 @@ class Application extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        // fontFamily: 'Montserrat',
+        fontFamily: 'CairoPlay',
       ),
       routerConfig: AppPages.routes,
       debugShowCheckedModeBanner: env == Environment.DEVELOPMENT,
