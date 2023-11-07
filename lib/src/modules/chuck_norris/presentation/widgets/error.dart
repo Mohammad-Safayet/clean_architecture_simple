@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:chuck_norris/src/core/utils/error_handling/error_handling.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_widget_mixin.dart';
 
-class ErrorWidget extends StatelessWidget with BaseWidgetMixin {
-  ErrorWidget({
+class ErrorBodyWidget extends StatelessWidget with BaseWidgetMixin {
+  ErrorBodyWidget({
     Key? key,
     required this.data,
     required this.onPressed,
