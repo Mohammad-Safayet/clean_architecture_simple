@@ -1,4 +1,3 @@
-import 'package:chuck_norris/src/core/utils/error_handling/failure_entity.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/joke.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/infra/repositories/jokes_repo.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_usecase.dart';

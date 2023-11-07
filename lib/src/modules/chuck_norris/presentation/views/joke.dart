@@ -1,5 +1,3 @@
-import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_joke_usecase.dart';
-import 'package:chuck_norris/src/modules/shared/base/base_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -7,9 +5,11 @@ import 'package:chuck_norris/src/core/utils/di/di.dart';
 import 'package:chuck_norris/src/core/constants/app_values.dart';
 import 'package:chuck_norris/src/modules/shared/base/base_view.dart';
 import 'package:chuck_norris/src/core/constants/app_text_styles.dart';
+import 'package:chuck_norris/src/modules/shared/base/base_usecase.dart';
 import 'package:chuck_norris/src/core/utils/error_handling/error_handling.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/entities/joke.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/presentation/widgets/error.dart';
+import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_joke_usecase.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/repositories/jokes_repo_impl.dart';
 import 'package:chuck_norris/src/modules/chuck_norris/domain/usecases/get_random_jokes_usecase.dart';
 
@@ -81,13 +81,15 @@ class JokesView extends BaseView<Joke> {
   @override
   Future<Joke> getData() async {
     final di = DependencyInjection.instance;
-    final usecase;
+    final BaseUsecase<Joke> usecase;
 
     if(category == "random") {
       usecase = GetRandomJokeUsecase(repository: di.getIt<JokesRepositoryImpl>());
     } else {
       usecase = GetJokeUsecase(repository: di.getIt<JokesRepositoryImpl>());
-      usecase.category = category;
+      if(usecase is GetJokeUsecase) {
+        usecase.category = category;
+      }
     }
 
     final joke = await usecase.call();
