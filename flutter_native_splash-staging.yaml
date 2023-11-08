@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#EEEEEE"
+  image: assets/images/chucknorris_icon.png
+  color_dark: "#EEEEEE"
+  image_dark: assets/images/chucknorris_icon.png
+
+  android_12:
+    image: assets/images/chucknorris_icon.png
+    icon_background_color: "#EEEEEE"
+    image_dark: assets/images/chucknorris_icon.png
+    icon_background_color_dark: "#EEEEEE"
+
+  web: false
