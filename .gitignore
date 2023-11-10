@@ -45,10 +45,12 @@ app.*.map.json
 /android/app/development
 /android/app/staging
 /android/app/production
+android/app/src/main/res/
 
 /android/app/src/production
 /android/app/src/development
 /android/app/src/staging
+ios/Runner/Assets.xcassets/drawable-*
 
 # Icons for ios
 ios/Runner/Assets.xcassets/AppIcon-development.appiconset/
