@@ -69,7 +69,7 @@ Contributions to the Chuck Norris Jokes App are welcomed! If you have new jokes 
 
 ## Issues
 
-If you encounter any issues, have suggestions, or want to share your favorite Chuck Norris jokes, please [open an issue](https://github.com/yourusername/chuck-norris-jokes-app/issues).
+If you encounter any issues, have suggestions, or want to share your favorite Chuck Norris jokes, please [open an issue](https://github.com/Mohammad-Safayet/clean_architecture_simple/issues).
 
 ## License
 
