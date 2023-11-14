@@ -59,6 +59,8 @@ I want to give a shout-out to some amazing projects that have been a huge inspir
 
 - **[Chuck Norris API](https://api.chucknorris.io/):** A free JSON API for hand curated Chuck Norris facts.
 - **[Assets Images](https://github.com/chucknorris-io/chuck-api/tree/master/src/main/resources/static/img):** Chuck Norris API GitHub repository.
+- **[Marcus Ng](https://www.youtube.com/watch?v=Vhm1Cv2uPko):** Flutter Flavors, App Icons, and Firebase Tutorial.
+- **[flutter_getx_template by hasancse91](https://github.com/hasancse91/flutter_getx_template):** A basic boilerplate template for starting a Flutter GetX project. GetX, Dio, MVVM, get CLI, Localization, Pagination etc are implemented..
 
 
 Enjoy the jokes and remember, Chuck Norris counted to infinity. Twice!
