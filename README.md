@@ -1,6 +1,4 @@
-<div style="display: flex; justify-content: center;">
-    ![App Icon](assets/images/chucknorris_logo_coloured_small.png)
-</div>
+<img align="center" alt="ChuckNorris" src="https://github.com/Mohammad-Safayet/clean_architecture_simple/blob/main/assets/images/chucknorris_icon.png?raw=true" />
 
 # Chuck Norris Jokes App
 
@@ -26,34 +24,11 @@ These instructions will help you set up and run the Flutter project on your loca
 1. #### Development Machine:
     Make sure you have [Flutter](https://flutter.dev/docs/get-started/install) and [Dart](https://dart.dev/get-dart) installed on your development machine.
 
-2. #### Preparing Android Environment:
-   
-   
+2. #### Configuration:
+   To configure and run this project [check here](configure.md)
 
 ### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/your-flutter-project.git
-    cd your-flutter-project
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    flutter pub get
-    ```
-
-### Run the App
-
-3. Run the app on an emulator or a connected device:
-
-    ```bash
-    flutter run
-    ```
-
-   The app will launch on your device/emulator.
+   To install and run this project on your device or emulator [check here](intsallation.md)
 
 ## Screenshots
 <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_1.png" alt="Application Screenshot 1" width="200" height="400"> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_2.png" alt="Application Screenshot 2" width="200" height="400"> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_3.png" alt="Application Screenshot 3" width="200" height="400">
@@ -84,7 +59,3 @@ I want to give a shout-out to some amazing projects that have been a huge inspir
 
 
 Enjoy the jokes and remember, Chuck Norris counted to infinity. Twice!
-
-flutterfire config --project=chucknorris-jokes-dev --out=lib/src/core/config/firebase/firebase_options_dev.dart --ios-bundle-id=com.example.chuck-norris.dev --macos-bundle-id=com.example.chuck-norris.dev --android-package-name=com.example.chuck_norris.dev
-flutterfire config --project=chucknorris-jokes-stage --out=lib/src/core/config/firebase/firebase_options_stage.dart --ios-bundle-id=com.example.chuck-norris.stag --macos-bundle-id=com.example.chuck-norris.stag --android-package-name=com.example.chuck_norris.stag
-flutterfire config --project=chucknorris-jokes-fc310 --out=lib/src/core/config/firebase/firebase_options.dart --ios-bundle-id=com.example.chuck-norris --macos-bundle-id=com.example.chuck-norris --android-package-name=com.example.chuck_norris
