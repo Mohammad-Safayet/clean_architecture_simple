@@ -1,0 +1,42 @@
+# Installation
+
+1. Clone the repository:
+
+    ```bash
+    mkdir chuck-norris
+    cd chuck-norris
+    git clone https://github.com/yourusername/your-flutter-project.git .
+    ```
+2. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+   
+3. Generate App icons:
+   ```bash
+   dart run flutter_launcher_icons:main -f flutter_launcher_icons*
+   ```
+   For iOS some additional steps needs to be taken. Please refer to this [Guide by Marcus Ng](https://youtu.be/Vhm1Cv2uPko?t=410&si=61BpA6f0Rayxwjs2). If facing other difficulties please refer to the [Official Guide](https://pub.dev/packages/flutter_launcher_icons).<br><br>
+
+4. Generate Native Splash screen:
+   ```bash
+   dart run flutter_native_splash:create --flavors development,staging,production
+   ```
+   For iOS some additional steps needs to be taken. Please refer to the [Official guide](https://pub.dev/packages/flutter_native_splash#ios-setup).<br><br>
+
+5. Add Firebase:
+
+   In order to connect to Firebase [check here](configure-firebase.md).
+
+### Run the App
+Run the app on an emulator or a connected device:
+
+```bash
+flutter run -t lib/main/main_dev.dart --flavor development
+```
+
+The app will launch on your device/emulator.
+
+flutterfire config --project=chucknorris-jokes-dev --out=lib/src/core/config/firebase/firebase_options_dev.dart --ios-bundle-id=com.example.chuck-norris.dev --macos-bundle-id=com.example.chuck-norris.dev --android-package-name=com.example.chuck_norris.dev
+flutterfire config --project=chucknorris-jokes-stage --out=lib/src/core/config/firebase/firebase_options_stage.dart --ios-bundle-id=com.example.chuck-norris.stag --macos-bundle-id=com.example.chuck-norris.stag --android-package-name=com.example.chuck_norris.stag
+flutterfire config --project=chucknorris-jokes-fc310 --out=lib/src/core/config/firebase/firebase_options.dart --ios-bundle-id=com.example.chuck-norris --macos-bundle-id=com.example.chuck-norris --android-package-name=com.example.chuck_norris
