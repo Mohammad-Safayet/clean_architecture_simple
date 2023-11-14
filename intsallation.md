@@ -36,7 +36,3 @@ flutter run -t lib/main/main_dev.dart --flavor development
 ```
 
 The app will launch on your device/emulator.
-
-flutterfire config --project=chucknorris-jokes-dev --out=lib/src/core/config/firebase/firebase_options_dev.dart --ios-bundle-id=com.example.chuck-norris.dev --macos-bundle-id=com.example.chuck-norris.dev --android-package-name=com.example.chuck_norris.dev
-flutterfire config --project=chucknorris-jokes-stage --out=lib/src/core/config/firebase/firebase_options_stage.dart --ios-bundle-id=com.example.chuck-norris.stag --macos-bundle-id=com.example.chuck-norris.stag --android-package-name=com.example.chuck_norris.stag
-flutterfire config --project=chucknorris-jokes-fc310 --out=lib/src/core/config/firebase/firebase_options.dart --ios-bundle-id=com.example.chuck-norris --macos-bundle-id=com.example.chuck-norris --android-package-name=com.example.chuck_norris
