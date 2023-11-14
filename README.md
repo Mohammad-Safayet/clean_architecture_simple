@@ -1,6 +1,6 @@
-<img align="center" alt="ChuckNorris" src="https://github.com/Mohammad-Safayet/clean_architecture_simple/blob/main/assets/images/chucknorris_icon.png?raw=true" />
-
 # Chuck Norris Jokes App
+
+<img align="center" alt="ChuckNorris" width="300" height="300" src="https://github.com/Mohammad-Safayet/clean_architecture_simple/blob/main/assets/images/chucknorris_icon.png?raw=true" />
 
 ## Overview
 
