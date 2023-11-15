@@ -89,6 +89,6 @@ keyAlias=<your keystore alias>
 password=<your keystore password>
 storeFile=<path to the keystore file>
 ```
-Then run `flutter build appbundle -t lib/main/main_prod.dart --flavor production` to generate app bundle (.aab) file. To generate .apk file, run `flutter build apk -t lib/main/main_prod.dart --flavor production --split-per-abi`.
+Then run `flutter build appbundle -t lib/main/main_prod.dart --flavor production` to generate app bundle (.aab) file. To generate .apk file, run `flutter build apk --split-per-abi -t lib/main/main_prod.dart --flavor production`.
 
 For more details, please read through guide to build and release android app documentation from [this link](https://docs.flutter.dev/deployment/android).
