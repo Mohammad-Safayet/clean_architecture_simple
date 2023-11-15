@@ -16,7 +16,7 @@
    ```bash
    dart run flutter_launcher_icons:main -f flutter_launcher_icons*
    ```
-   For iOS some additional steps needs to be taken. Please refer to this [Guide by Marcus Ng](https://youtu.be/Vhm1Cv2uPko?t=410&si=61BpA6f0Rayxwjs2). If facing other difficulties please refer to the [Official Guide](https://pub.dev/packages/flutter_launcher_icons).<br><br>
+   For iOS some additional steps needs to be taken. Please refer to this [guide](https://medium.com/@keaindrak/flavoring-a-flutter-app-3df51fe86d7a). If facing other difficulties please refer to the [Official Guide](https://pub.dev/packages/flutter_launcher_icons).<br><br>
 
 4. Generate Native Splash screen:
    ```bash

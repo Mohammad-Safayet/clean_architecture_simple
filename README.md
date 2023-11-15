@@ -31,7 +31,7 @@ These instructions will help you set up and run the Flutter project on your loca
    To configure and run this project [check here](configure.md)
 
 ### Installation
-   To install and run this project on your device or emulator [check here](intsallation.md)
+   To install and run this project on your device or emulator [check here](installation.md)
 
 ## Screenshots
 <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_1.png" alt="Application Screenshot 1" width="200" height="400"> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_2.png" alt="Application Screenshot 2" width="200" height="400"> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/Mohammad-Safayet/clean_architecture_simple/main/screenshots/screenshot_3.png" alt="Application Screenshot 3" width="200" height="400">
